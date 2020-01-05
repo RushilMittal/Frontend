@@ -1,5 +1,6 @@
 // NOt required now
 export class SkillGroup {
-    name: String;
-    subskill: String[];
+    name: String[];
+    subSkill: String[];
+    rating : number;
 }

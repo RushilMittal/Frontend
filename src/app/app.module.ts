@@ -40,6 +40,7 @@ import { MyEnrolledTrainingsComponent } from './modules/trainings/my-enrolled-tr
 import { AvailableTrainingsComponent } from './modules/trainings/available-trainings/available-trainings.component';
 import { SkillgroupComponent } from './modules/skills/skillgroup/skillgroup.component';
 import { SearchTransformPipe } from './modules/search-transform.pipe';
+import { ErrorHandler } from './services/handleerror.service';
 
 import { TrainingListPipe } from './modules/trainings/training-list/training-list-pipe.pipe';
 import { AddTrainingComponent } from './modules/trainings/add-training/add-training.component';
@@ -56,6 +57,11 @@ import { DashBoardSkillPlaceHolderService } from './services/dashboardskillplace
 import { DashboardCertificationPlaceholderService } from './services/dashboardcertificationplaceholder.service';
 import { MySkillService } from './services/myskillservice.service';
 import { SkillGroupService } from './services/SkillGroupService.service';
+import { SearchService } from './services/search.service';
+import { AllSkillService } from './services/allskillservice.service';
+import { MySubSkillService } from './services/mysubskillservice.service';
+import { FileUploadComponent } from './modules/shared/file-upload/file-upload.component';
+import { SendEmailComponent } from './modules/shared/send-email/send-email.component';
 
 @NgModule({
   declarations: [
@@ -104,6 +110,8 @@ import { SkillGroupService } from './services/SkillGroupService.service';
     TrainingListPipe,
     AddTrainingComponent,
     AvailableTrainingPipe,
+    FileUploadComponent,
+    SendEmailComponent,
 
   ],
   imports: [
@@ -130,8 +138,13 @@ import { SkillGroupService } from './services/SkillGroupService.service';
     // Providers for Skills Services
     MySkillService,
     SkillGroupService,
+    SearchService,
+    AllSkillService,
+    MySubSkillService,
     // For displaying the toast
     ToastService,
+    // testing purpose
+    ErrorHandler
   ],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA,

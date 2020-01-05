@@ -22,9 +22,9 @@
     {
       "id": 7,
       "skillId":1,
-      "subSkill": "Basic Python",
-"modelSubSkillDesc":"Basic Python",
-"modelSkill": "Python",
+      "subSkill": "Basic Java",
+"modelSubSkillDesc":"Basic Java",
+"modelSkill": "Java",
 "modelSkillGroup": "Programming Language",
 "modelPractice": "Application Development",
 "totalNumberofRatedUsers": 1
@@ -39,9 +39,9 @@
     {
         "id": 3,
         "skillId":1,
-        "subSkill": "Basic Python",
-  "modelSubSkillDesc":"Basic Python",
-  "modelSkill": "Python",
+        "subSkill": "Basic C#",
+  "modelSubSkillDesc":"Basic C#",
+  "modelSkill": "C#",
   "modelSkillGroup": "Programming Language",
   "modelPractice": "Application Development",
   "totalNumberofRatedUsers": 1
@@ -59,7 +59,7 @@
       "subSkill": "Basic HTML",
 "modelSubSkillDesc":"Basic Python",
 "modelSkill": "WEB",
-"modelSkillGroup": "Programming Language",
+"modelSkillGroup": "Markup Language",
 "modelPractice": "Application Development",
 "totalNumberofRatedUsers": 1},
     "rating":4,

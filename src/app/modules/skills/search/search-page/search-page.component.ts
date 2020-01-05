@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-search-page',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SearchPageComponent implements OnInit {
 
-  constructor() { }
+  constructor(private location: Location) { }
 
-  ngOnInit() {
+  filter: string;
+
+  goBack(): void {
+    this.location.back();
   }
 
+  ngOnInit() {
+    const x = document.getElementById('modelSkill-search');
+    x.focus();
+  }
 }

@@ -11,9 +11,9 @@ export class SkillGroupService {
     constructor(private httpClient: HttpClient) {}
     getData():Observable<SkillGroup> {
        return this.httpClient.get<SkillGroup>(this.url)
-       .pipe(
-        // catchError(this.handler.handleError)
-       );
+      //  .pipe(
+      //    catchError(this.handler.handleError)
+      //  );
 
     }
 }

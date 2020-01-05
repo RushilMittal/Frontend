@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { AllSkillService } from '../../../services/allskillservice.service';
+import { SkillGroup } from '../../../model/SkillGroup';
 
 @Component({
   selector: 'app-allskill',
@@ -7,9 +9,31 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AllskillComponent implements OnInit {
 
-  constructor() { }
+  skillGroup: SkillGroup[];
+  errorMessage: any;
+  showSpinner = false;
+
+  constructor(private allSkillService: AllSkillService) { }
 
   ngOnInit() {
+    this.getAllSkill();
   }
 
+  getAllSkill(){
+    this.showSpinner = true;
+    this.allSkillService.getAllSkillsData()
+      .subscribe(skillGroupResponse => {
+        console.log(skillGroupResponse);
+        this.skillGroup = skillGroupResponse;
+        this.errorMessage = 'Hurry Up! Rate your First Skill';
+      },
+      error => {
+        this.errorMessage = <any>error;
+        this.showSpinner = false;
+      },
+      () => {
+        this.showSpinner = false
+      }
+      );
+  }
 }
