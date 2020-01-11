@@ -35,7 +35,7 @@
                         Please enter certification number.
                     </span>
 
-          <span *ngIf="certificateForm.get('certificationNumber').errors.pattern" style="color:rgba(255, 0, 0, 0.80)">
+                    <span *ngIf="certificateForm.get('certificationNumber').errors.pattern" style="color:rgba(255, 0, 0, 0.80)">
                         Please enter valid number.
                     </span>
 
@@ -56,7 +56,7 @@
                     <span *ngIf="certificateForm.get('certificationUrl').errors.required" >
                         Please enter certification Url.
                     </span>
-          <span *ngIf="certificateForm.get('certificationUrl').errors.pattern" >
+                    <span *ngIf="certificateForm.get('certificationUrl').errors.pattern" >
                         Please enter valid Url.
                     </span>
 
@@ -73,11 +73,10 @@
             <label class="col control-label" for="validityId"> Is there a validity period for your certification?</label>
             <div class="col-md-8">
                 <label class="radio" style="margin-right:10%">
-                    <input  type="radio" id="validityId" formControlName="certificationValidityPeriod" value="Yes"
-                        (click)="setValidity('Yes')" required>Yes
+                    <input  type="radio" id="validityId" formControlName="certificationValidityPeriod" value="Yes" (click)="setValidity('Yes')" required>Yes
                 </label>
                 <label class="radio">
-                    <input checked type="radio" id="validityId" formControlName="certificationValidityPeriod" value="No" (click)="setValidity('No')"  >No
+                    <input checked type="radio" id="validityId" formControlName="certificationValidityPeriod" value="No" (click)="setValidity('No')">No
                 </label>
             </div>
         </div>
@@ -94,7 +93,6 @@
                     <span *ngIf="certificateForm.get('certificationValidityDate').errors.required" style="color:rgba(255, 0, 0, 0.80)">
                         Please enter completion Date.
                     </span>
-
                 </span>
             </div>
         </div>
@@ -105,16 +103,15 @@
         <div class="form-group">
             <div class="col-md-4 col-md-offset-2">
                 <span>
-                    <button class="btn btn-primary" id="cancel-button" (click) ="cancel()" >
-                        Cancel
-                    </button>
+                  <button class="btn btn-primary" id="cancel-button" (click) ="cancel()" >
+                      Cancel
+                  </button>
                 </span>
                 <span>
                   <button class="btn btn-primary" id="submit-button" type="submit" (click)="save()" [disabled]="!certificateForm.valid">
                       Submit
                   </button>
-              </span>
-
+                </span>
             </div>
         </div>
     </fieldset>

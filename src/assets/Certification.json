@@ -1,0 +1,14 @@
+[
+    {
+        "id": 1,
+        "skillId": 1,
+        "certificationName": "Project Management Professional",
+        "institution": "PMI"
+    },
+    {
+        "id": 2,
+        "skillId": 2,
+        "certificationName": "AWS Certified Professional(PMP)",
+        "institution": "Amazon"
+    }
+]

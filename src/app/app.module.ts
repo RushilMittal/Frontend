@@ -55,6 +55,7 @@ import { ToastService } from './services/toast.service';
 import { DashboardTrainingPlaceholderService } from './services/dashboardtrainingplaceholder.service';
 import { DashBoardSkillPlaceHolderService } from './services/dashboardskillplaceholder.service';
 import { DashboardCertificationPlaceholderService } from './services/dashboardcertificationplaceholder.service';
+
 import { MySkillService } from './services/myskillservice.service';
 import { SkillGroupService } from './services/SkillGroupService.service';
 import { SearchService } from './services/search.service';
@@ -62,6 +63,11 @@ import { AllSkillService } from './services/allskillservice.service';
 import { MySubSkillService } from './services/mysubskillservice.service';
 import { FileUploadComponent } from './modules/shared/file-upload/file-upload.component';
 import { SendEmailComponent } from './modules/shared/send-email/send-email.component';
+
+import { AllCertificationService } from './services/allcertification.service';
+import { AddNewCertificateService } from './services/addnewcertificate.service';
+import { NewCertificationService } from './services/newcertification.service';
+import { MyCertificationService } from './services/mycertification.service';
 
 @NgModule({
   declarations: [
@@ -132,6 +138,10 @@ import { SendEmailComponent } from './modules/shared/send-email/send-email.compo
   ],
   providers: [
     // Providers for certification Services
+    AllCertificationService,
+    AddNewCertificateService,
+    NewCertificationService,
+    MyCertificationService,
     DashboardTrainingPlaceholderService,
     DashBoardSkillPlaceHolderService,
     DashboardCertificationPlaceholderService,
